@@ -4,21 +4,8 @@ import { TestLibraryComponent } from './test-library.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule, MatToolbarModule, MatCardModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
-
-// first define an interface for our configuration
-export interface TestLibConfig {
-  title: string;
-  teams: {
-    country: string;
-    trophies: number;
-  }[];
-  sport: string;
-}
-
-// then define injectionToken
-export const TestLibConfigService = new InjectionToken<TestLibConfig>(
-  'TestLibConfig'
-);
+import { TestLibConfig } from './test-library.config';
+import { TestLibConfigService } from './test-library.config.service';
 
 @NgModule({
   imports: [BrowserModule, FlexLayoutModule, MatListModule, MatToolbarModule, MatCardModule],

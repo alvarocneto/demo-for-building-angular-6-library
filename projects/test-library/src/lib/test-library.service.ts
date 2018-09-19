@@ -1,6 +1,9 @@
 import { Injectable, Inject } from '@angular/core';
-import { TestLibConfigService, TestLibConfig } from './test-library.module';
+
 import { Observable, of } from 'rxjs';
+import { TestLibConfigService } from './test-library.config.service';
+import { TestLibConfig } from './test-library.config';
+
 
 @Injectable({
   providedIn: 'root'
